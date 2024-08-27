@@ -1,0 +1,60 @@
+<BINDER>
+   NAME="ТД паї"
+   <REPORTS>
+       <Report>
+           <Caption>Техническая документация</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\ТД паї\Техническая документация .fr3</Document>
+       </Report>
+
+       <Report>
+           <Caption>Техническое задание (Одесса)</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\ТД паї\Техническое задание (Одесса) .fr3</Document>
+       </Report>
+
+       <Report>
+           <Caption>схема обмірі</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\ТД паї\схема обмірі.fr3</Document>
+       </Report>
+
+       <Report>
+           <Caption>схема привязки точок до державної геодезичної мережі - копия</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\ТД паї\схема привязки точок до державної геодезичної мережі - копия.fr3</Document>
+       </Report>
+
+       <Report>
+           <Caption>Каталог координат участка (Одесса)</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\ТД паї\Каталог координат участка (Одесса).fr3</Document>
+       </Report>
+
+       <Report>
+           <Caption>План меж зем.діл.</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\ТД паї\План меж зем.діл..fr3</Document>
+       </Report>
+
+       <Report>
+           <Caption>Кадастровый_план_2021</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\ТД паї\Кадастровый_план_2021.fr3</Document>
+       </Report>
+
+       <Report>
+           <Caption>Обмеження</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\ТД паї\Обмеження.fr3</Document>
+       </Report>
+
+       <Report>
+           <Caption>КРЕСЛЕННЯ</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\ТД паї\КРЕСЛЕННЯ.fr3</Document>
+       </Report>
+
+       <Report>
+           <Caption>Акт приёмо-передачи межевых знаков 2017</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\ТД паї\Акт приёмо-передачи межевых знаков 2017.fr3</Document>
+       </Report>
+
+       <Report>
+           <Caption>Акт перенесення в натуру (на місцевість) меж охоронних</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\ТД паї\Акт перенесення в натуру (на місцевість) меж охоронних .fr3</Document>
+       </Report>
+
+   </REPORTS>
+</BINDER>

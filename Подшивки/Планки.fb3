@@ -1,0 +1,15 @@
+<BINDER>
+   NAME="Планки"
+   <REPORTS>
+       <Report>
+           <Caption>Кадастровый_план_2021</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\Кадастровый_план_2021.fr3</Document>
+       </Report>
+
+       <Report>
+           <Caption>Каталог координат участка (Одесса)</Caption>
+           <Document>F:\Работа\Шаблоны\СТРОГИЙ\Каталог координат участка (Одесса).fr3</Document>
+       </Report>
+
+   </REPORTS>
+</BINDER>

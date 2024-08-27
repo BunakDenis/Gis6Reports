@@ -1,0 +1,55 @@
+procedure Button1OnClick(Sender: TfrxComponent);
+    begin
+
+        If (RECORDCOUNT( 'DM1.QiGosakt') > 0) then
+        begin
+        GosActName := <DM1.QbGosAkt."NameTypeLegal">;
+            len := LENGTH(GosActName);
+            InfoOFGosact := 'Копія ' + Copy(<DM1.QbGosAkt."NameTypeLegal">, 1, 7) + 'ого' + ' акту ' + Copy(<DM1.QbGosAkt."NameTypeLegal">,  Pos('на', <DM1.QbGosAkt."NameTypeLegal">), len) + ' серія ' + Trim( Copy(<DM1.QbGosAkt."Blank_Num">, 1, 2)) + ' №' + Trim( Copy(<DM1.QbGosAkt."Blank_Num">, 3, 6)) + ' зареєстровний за № ' + Trim(<DM1.QiGosAkt."Reg_SubNum">) + ' від ' + DATEWRITE(<DM1.QiGosAkt."Date_Reg">);
+            
+            if (CheckBox1.Checked = True) then
+            PidstavaBuilding := CheckBox1.text;
+
+            DomVl := DomVl + <DM1.QbGosAkt."NameTypeLegal"> + ' серія та номер ' + Trim( <DM1.QbGosAkt."Blank_Num">) + ' зареєстровний за № ' + Trim(<DM1.QiGosAkt."Reg_SubNum">) + ' від ' + DATEWRITE(<DM1.QiGosAkt."Date_Reg">) + ' та ' + Combobox1.text + ' зареєстровний за № ' + Edit1.text + ' від ' + Edit2.text + ' року';
+            
+            if(AnsiContainsStr(PidstavaBuilding, 'Свідоцтво')) then
+
+            InfoPidstava := Copy(PidstavaBuilding, 1, 'во') + 'ва' + Copy(PidstavaBuilding, Pos(PidstavaBuilding, 'во'), PidstavaBuilding.LENGTH) + ' зареєстровний за № ' + Edit1.text + ' від ' + Edit2.text + ' року';
+            else
+
+            DomVl := DomVl + <DM1.QbGosAkt."NameTypeLegal"> + ' серія та номер ' + Trim( <DM1.QbGosAkt."Blank_Num">) + ' зареєстровний за № ' + Trim(<DM1.QiGosAkt."Reg_SubNum">) + ' від ' + DATEWRITE(<DM1.QiGosAkt."Date_Reg">)
+        end
+         else
+         begin
+            if (CheckBox1.Checked = True) then
+             begin
+                DomVl := DomVl + PidstavName + ' та ' + Combobox1.text + ' зареєстровний за №' + Edit1.text + ' від ' + Edit2.text + ' року';
+              end
+            else
+
+                DomVl := DomVl + PidstavName;
+
+       end;
+
+       //Назва підстави для інформації
+
+      If (RECORDCOUNT( 'DM1.QiGosakt') > 0) then
+        begin
+
+
+            PidstavaNameForInf := PidstavaNameForInf + <DM1.QbGosAkt."NameTypeLegal">
+
+        end
+        else
+           If (LOCATEDATA( 'DM1.QbDecision', 'ID_Decision', <DM1.TbUser."ID_Decision">) = True) Then
+            begin
+
+                PidstavaNameForInf := PidstavaNameForInf + 'Рішення';
+
+            end
+            else
+
+                PidstavaNameForInf := PidstavaNameForInf + Combobox1.text;
+
+       end;
+
