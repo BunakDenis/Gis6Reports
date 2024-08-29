@@ -1,0 +1,27 @@
+//Разбивка адреса земельного участка 
+
+if Pos('м.', ParcelAdressForSplit) = 1 then
+  begin
+  AktCity := Copy(ParcelAdress, (Pos('м.', ParcelAdress)), (Pos(', ', ParcelAdress) - 1));
+  end
+  else
+  begin
+  Oblast := Copy(ParcelAdressForSplit, 0, (Pos(',', ParcelAdressForSplit) - 1));
+  Delete(ParcelAdressForSplit, 1, (LENGTH(Oblast) + 2));
+  Trim(ParcelAdressForSplit);
+  Region := Copy(ParcelAdressForSplit, 0, (Pos(',', ParcelAdressForSplit) - 1));
+
+       If (Pos('.', ParcelAdressForSplit) > 0) then
+       Delete(ParcelAdressForSplit, 1, Pos('м.', ParcelAdressForSplit) - 1);
+       Trim(ParcelAdressForSplit);
+       AktCity := Copy(ParcelAdressForSplit, (Pos('м.', ParcelAdressForSplit)), (Pos(',', ParcelAdressForSplit) - 1));
+       If (Pos('.', ParcelAdressForSplit) > 0) then
+       Delete(ParcelAdressForSplit, 1, Pos('с.', ParcelAdressForSplit) - 1);
+       Trim(ParcelAdressForSplit);
+       AktCity := Copy(ParcelAdressForSplit, (Pos('с.', ParcelAdressForSplit)), (Pos(',', ParcelAdressForSplit) - 1));
+       If (Pos('.', ParcelAdressForSplit) > 0) then
+       Delete(ParcelAdressForSplit, 1, Pos('смт.', ParcelAdressForSplit) - 1);
+       Trim(ParcelAdressForSplit);
+       AktCity := Copy(ParcelAdressForSplit, (Pos('смт.', ParcelAdressForSplit)), (Pos(',', ParcelAdressForSplit) - 1));
+  end;
+
