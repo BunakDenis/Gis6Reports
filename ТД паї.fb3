@@ -51,5 +51,10 @@
            <Document>Акт перенесення в натуру (на місцевість) меж охоронних .fr3</Document>
        </Report>
 
+       <Report>
+           <Caption>Заява про затвердження ТД</Caption>
+           <Document>Заява про затвердження ТД.fr3</Document>
+       </Report>
+
    </REPORTS>
 </BINDER>
